@@ -2693,6 +2693,7 @@ nonReserved
     | KW_SUMMARY
     | KW_SYSTEM_TIME
     | KW_SYSTEM_VERSION
+    | KW_TABLE
     | KW_TABLES
     | KW_TBLPROPERTIES
     | KW_TEMPORARY

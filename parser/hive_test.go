@@ -13,8 +13,8 @@ func TestIsHive(t *testing.T) {
 		)
 		SELECT A,B,C
 		FROM A`: true,
-		"show extended tables in db where t = 't'": true,
-		"select a from a where date = '20250806'":  true,
+		"show extended tables in db where t = 't'":    true,
+		"select a from table where date = '20250806'": true,
 
 		"I am a good select body gg where": false,
 		"select":                           false,
