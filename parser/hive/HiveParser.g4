@@ -2538,6 +2538,7 @@ nonReserved
     | KW_CRON
     | KW_DATA
     | KW_DATABASES
+    | KW_DATE
     | KW_DATETIME
     | KW_DAY
     | KW_DAYOFWEEK
