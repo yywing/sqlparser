@@ -2,7 +2,7 @@ package parser
 
 import "testing"
 
-func TestIs(t *testing.T) {
+func TestIsSpark(t *testing.T) {
 	sqls := map[string]bool{
 		"CREATE TEMPORARY VIEW `test_tag` AS\nSELECT\n  *\nFROM `moss`.`test_tag`; SELECT a from A;;;;;": true,
 		"create table if not exists t (i int, d decimal) stored as orc;":                                 true,
