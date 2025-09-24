@@ -1,5 +1,9 @@
 lexer grammar FlinkSqlLexer;
 
+options {
+    caseInsensitive= true;
+}
+
 // SKIP
 
 WHITE_SPACE       : (' ' | '\t' | '\r' | '\n')                                     -> channel(HIDDEN);
