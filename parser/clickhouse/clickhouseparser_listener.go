@@ -530,6 +530,9 @@ type ClickHouseParserListener interface {
 	// EnterColumnExprOr is called when entering the ColumnExprOr production.
 	EnterColumnExprOr(c *ColumnExprOrContext)
 
+	// EnterColumnExprCastSymbol is called when entering the ColumnExprCastSymbol production.
+	EnterColumnExprCastSymbol(c *ColumnExprCastSymbolContext)
+
 	// EnterColumnExprPrecedence1 is called when entering the ColumnExprPrecedence1 production.
 	EnterColumnExprPrecedence1(c *ColumnExprPrecedence1Context)
 
@@ -571,6 +574,9 @@ type ClickHouseParserListener interface {
 
 	// EnterColumnExprTupleAccess is called when entering the ColumnExprTupleAccess production.
 	EnterColumnExprTupleAccess(c *ColumnExprTupleAccessContext)
+
+	// EnterColumnExprMapAccess is called when entering the ColumnExprMapAccess production.
+	EnterColumnExprMapAccess(c *ColumnExprMapAccessContext)
 
 	// EnterColumnExprCase is called when entering the ColumnExprCase production.
 	EnterColumnExprCase(c *ColumnExprCaseContext)
@@ -1190,6 +1196,9 @@ type ClickHouseParserListener interface {
 	// ExitColumnExprOr is called when exiting the ColumnExprOr production.
 	ExitColumnExprOr(c *ColumnExprOrContext)
 
+	// ExitColumnExprCastSymbol is called when exiting the ColumnExprCastSymbol production.
+	ExitColumnExprCastSymbol(c *ColumnExprCastSymbolContext)
+
 	// ExitColumnExprPrecedence1 is called when exiting the ColumnExprPrecedence1 production.
 	ExitColumnExprPrecedence1(c *ColumnExprPrecedence1Context)
 
@@ -1231,6 +1240,9 @@ type ClickHouseParserListener interface {
 
 	// ExitColumnExprTupleAccess is called when exiting the ColumnExprTupleAccess production.
 	ExitColumnExprTupleAccess(c *ColumnExprTupleAccessContext)
+
+	// ExitColumnExprMapAccess is called when exiting the ColumnExprMapAccess production.
+	ExitColumnExprMapAccess(c *ColumnExprMapAccessContext)
 
 	// ExitColumnExprCase is called when exiting the ColumnExprCase production.
 	ExitColumnExprCase(c *ColumnExprCaseContext)

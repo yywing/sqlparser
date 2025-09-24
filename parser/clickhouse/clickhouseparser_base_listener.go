@@ -1153,6 +1153,12 @@ func (s *BaseClickHouseParserListener) EnterColumnExprOr(ctx *ColumnExprOrContex
 // ExitColumnExprOr is called when production ColumnExprOr is exited.
 func (s *BaseClickHouseParserListener) ExitColumnExprOr(ctx *ColumnExprOrContext) {}
 
+// EnterColumnExprCastSymbol is called when production ColumnExprCastSymbol is entered.
+func (s *BaseClickHouseParserListener) EnterColumnExprCastSymbol(ctx *ColumnExprCastSymbolContext) {}
+
+// ExitColumnExprCastSymbol is called when production ColumnExprCastSymbol is exited.
+func (s *BaseClickHouseParserListener) ExitColumnExprCastSymbol(ctx *ColumnExprCastSymbolContext) {}
+
 // EnterColumnExprPrecedence1 is called when production ColumnExprPrecedence1 is entered.
 func (s *BaseClickHouseParserListener) EnterColumnExprPrecedence1(ctx *ColumnExprPrecedence1Context) {
 }
@@ -1243,6 +1249,12 @@ func (s *BaseClickHouseParserListener) EnterColumnExprTupleAccess(ctx *ColumnExp
 
 // ExitColumnExprTupleAccess is called when production ColumnExprTupleAccess is exited.
 func (s *BaseClickHouseParserListener) ExitColumnExprTupleAccess(ctx *ColumnExprTupleAccessContext) {}
+
+// EnterColumnExprMapAccess is called when production ColumnExprMapAccess is entered.
+func (s *BaseClickHouseParserListener) EnterColumnExprMapAccess(ctx *ColumnExprMapAccessContext) {}
+
+// ExitColumnExprMapAccess is called when production ColumnExprMapAccess is exited.
+func (s *BaseClickHouseParserListener) ExitColumnExprMapAccess(ctx *ColumnExprMapAccessContext) {}
 
 // EnterColumnExprCase is called when production ColumnExprCase is entered.
 func (s *BaseClickHouseParserListener) EnterColumnExprCase(ctx *ColumnExprCaseContext) {}

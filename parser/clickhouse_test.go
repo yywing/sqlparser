@@ -7,6 +7,7 @@ func TestIsClickhouse(t *testing.T) {
 		"SELECT COLUMNS('a'), COLUMNS('c'), toTypeName(COLUMNS('c')) FROM col_names":                                            true,
 		"CREATE TABLE IF NOT EXISTS all_hits ON CLUSTER cluster (p Date, i Int32) ENGINE = Distributed(cluster, default, hits)": true,
 		"INSERT INTO t VALUES (1, 'Hello, world'), (2, 'abc'), (3, 'def')":                                                      true,
+		"SELECT if(event_name = 'handle_v3_click_ai_recall_solved', `extra_data` { 'oncall_flow_id' }, 'no')":                   true,
 
 		"I am a good select body gg where": false,
 		"select":                           false,

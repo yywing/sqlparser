@@ -1,7 +1,6 @@
 package parser
 
 import (
-	"fmt"
 	"strings"
 	"unicode"
 
@@ -41,12 +40,10 @@ func IsFlink(statement string) bool {
 	_ = p.SqlStatements()
 
 	if lexerErrorListener.Err != nil {
-		fmt.Println("aa error: ", parserErrorListener.Err)
 		return false
 	}
 
 	if parserErrorListener.Err != nil {
-		fmt.Println("parser error: ", parserErrorListener.Err)
 		return false
 	}
 	return true
