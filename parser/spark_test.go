@@ -28,10 +28,11 @@ func TestIsSpark(t *testing.T) {
 
 func TestIsMeaningfulSpark(t *testing.T) {
 	sqls := map[string]bool{
-		"":      false,
-		";":     false,
-		"-- aa": false,
-		"# aaa": false,
+		"":       false,
+		";":      false,
+		"-- aa":  false,
+		"# aaa":  false,
+		"select": false,
 	}
 	for sql, expect := range sqls {
 		result := IsMeaningfulSpark(sql)

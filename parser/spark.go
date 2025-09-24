@@ -50,7 +50,7 @@ func IsSpark(statement string) bool {
 }
 
 func IsMeaningfulSpark(sql string) bool {
-	ok := IsHplsql(sql)
+	ok := IsSpark(sql)
 	if !ok {
 		return false
 	}
